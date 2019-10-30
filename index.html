@@ -6,40 +6,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Verificador de perfiles de Github</title>
-  <link href="estilos-home.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="estilos-home.css" rel="stylesheet">
 
 </head>
 
 <body>
-  <div id=formulario>
-    <h1> Verificador de perfiles de Github</h1>
-    <h2> Insertar nombre de usuario </h2>
-
-    <form>
-      Nombre de usuario: <br>
-      <input id="username" type="text"> <br>
+  <div id="formulario">
+    <div class="contenedor-titulos">
+      <h1 class="display-4"> Verificador de perfiles de Github</h1>
+      <h2 class="display-5"> Insertar nombre de usuario </h2>
+    </div>
+    <form class="contenedor-formulario">
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">@</span>
+        </div>
+        <input id="username" type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-lg">
+      </div>
+      <button onclick="showUserData()" type="button" class="btn btn-outline-primary">Buscar</button>
+      <!-- <button onclick="showUserData()">comenzar</button> -->
     </form>
-
-    <button onclick="showUserData()">comenzar</button>
   </div>
 
-  <div id="ficha">
-    <h1 id="usuario"> </h1>
+  <div id="ficha" class="contendor-info">
+    <div class="user-foto">
+      <h1 id="usuario"> </h1>
+      <div id="imagen"></div>
+    </div>
 
-    <div id="imagen"></div>
-
-
-
-    <p id="nombre">Nombre: </p>
-
-    <p id="ubicacion">Ubicacion: </p>
-    <p>URL: <a href="" id="url"></a></p>
-    <p id="seguidores">Seguidores: </p>
-    <p>Repos_url: <a href="" id="repos"></a></p>
-
+    <div class="info-user">
+      <p class="font-weight-light" id="nombre">Nombre: </p>
+      <p class="font-weight-light" id="ubicacion">Ubicacion: </p>
+      <p class="font-weight-light">URL: <a href="" id="url"></a></p>
+      <p class="font-weight-light" id="seguidores">Seguidores: </p>
+      <p class="font-weight-light">Repos_url: <a href="" id="repos"></a></p>
+    </div>
   </div>
   <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@ function showUserData() {
 
     let repo_url = `${user.html_url}/?tab=repositories`
 
-    document.querySelector("#usuario").innerText = user.login
+    document.querySelector("#usuario").innerText = `@${user.login}`
     document.querySelector("#nombre").innerText += ` ${user.name}`
     document.querySelector("#ubicacion").innerText += ` ${user.location}`
     document.querySelector("#url").innerText = `${user.html_url}`
